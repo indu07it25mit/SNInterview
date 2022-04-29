@@ -1,44 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sWe-pc-ES8">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sWe-pc-ES8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Coffee Shops ☕️-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SNInterview" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DashboardViewController" customModule="SNInterview" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EqN-vb-Np5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zj5-a7-ti2">
-                                <rect key="frame" x="10" y="98" width="394" height="754"/>
-                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MYH-yJ-OSD">
+                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="coffeeCell" id="rHS-vk-FIW" customClass="CoffeeitemCellView" customModule="SNInterview" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rHS-vk-FIW" id="ucl-BO-eG8">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kuR-aI-gZG" customClass="CoffeeShopItemViewWrapper" customModule="SNInterview" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kuR-aI-gZG" firstAttribute="top" secondItem="ucl-BO-eG8" secondAttribute="top" id="0Xh-5b-xQJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="kuR-aI-gZG" secondAttribute="bottom" id="9CC-Ee-w9f"/>
+                                                <constraint firstItem="kuR-aI-gZG" firstAttribute="leading" secondItem="ucl-BO-eG8" secondAttribute="leading" id="9Z2-MK-S33"/>
+                                                <constraint firstAttribute="trailing" secondItem="kuR-aI-gZG" secondAttribute="trailing" id="YLn-xm-ceZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="coffeeView" destination="kuR-aI-gZG" id="jPN-xu-W4R"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="800-ib-arO"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="sIj-Zb-gb7"/>
+                                </connections>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Zj5-a7-ti2" firstAttribute="leading" secondItem="mFk-oS-YO4" secondAttribute="leading" constant="10" id="Au3-8w-y8d"/>
-                            <constraint firstItem="mFk-oS-YO4" firstAttribute="trailing" secondItem="Zj5-a7-ti2" secondAttribute="trailing" constant="10" id="Tej-np-SpK"/>
-                            <constraint firstItem="Zj5-a7-ti2" firstAttribute="top" secondItem="mFk-oS-YO4" secondAttribute="top" constant="10" id="jgZ-8h-b0t"/>
-                            <constraint firstItem="mFk-oS-YO4" firstAttribute="bottom" secondItem="Zj5-a7-ti2" secondAttribute="bottom" constant="10" id="kWc-x2-Fwq"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mFk-oS-YO4"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="Coffee Shops ☕️" id="5g7-EK-T8y"/>
                     <connections>
-                        <outlet property="stackView" destination="Zj5-a7-ti2" id="KBp-Hh-KWe"/>
+                        <outlet property="tableView" destination="MYH-yJ-OSD" id="1Bg-Af-JfG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1068" y="783"/>
+            <point key="canvasLocation" x="1446.376811594203" y="120.53571428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MJa-tv-hQK">
@@ -54,6 +78,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ROT-4l-zBj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="665" y="121"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

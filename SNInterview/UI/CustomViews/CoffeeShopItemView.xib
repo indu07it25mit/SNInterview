@@ -58,9 +58,9 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="nameLabel" destination="tCp-fr-z45" id="GMO-Ca-MYy"/>
-                <outlet property="ratingLabel" destination="KmV-I4-37A" id="BMx-Uf-ros"/>
-                <outlet property="reviewLabel" destination="0Lb-wt-SgU" id="3GQ-M7-ENy"/>
+                <outlet property="nameLabel" destination="tCp-fr-z45" id="FWW-VR-z0l"/>
+                <outlet property="ratingLabel" destination="KmV-I4-37A" id="DpD-nZ-8CF"/>
+                <outlet property="reviewLabel" destination="0Lb-wt-SgU" id="FYX-Kb-ew2"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="283.25892857142856"/>
         </view>

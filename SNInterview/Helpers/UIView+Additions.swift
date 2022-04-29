@@ -18,4 +18,11 @@ extension UIView {
         
         return loadedView
     }
+    
+    class func fromNib<T: UIView>() -> T {
+        let bundle = Bundle(for: self)
+        let nib = UINib(nibName: String(describing: T.self), bundle: bundle)
+        return nib.instantiate(withOwner: nil, options: nil).first as! T
+    }
 }
+

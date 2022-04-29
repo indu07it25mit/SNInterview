@@ -7,6 +7,7 @@
 
 import UIKit
 
+@IBDesignable
 class CoffeeShopItemView: UIView {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var reviewLabel: UILabel!
