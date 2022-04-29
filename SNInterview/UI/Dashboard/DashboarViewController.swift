@@ -11,7 +11,7 @@ import UIKit
 class DashboardViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
-    var viewModel: DashboardViewModel = DashboardViewModel(dependancyInjection: DependancyInjection.shared)
+    var viewModel: DashboardViewModel = DashboardViewModel()
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +39,14 @@ extension DashboardViewController: UITableViewDataSource {
 
 extension DashboardViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let model = viewModel.getCoffeeShop(at: indexPath.row)
+        guard let controller = UIStoryboard.review.instantiateViewController(withIdentifier: "Review") as? ReviewViewController else { return }
+        controller.viewModel.setSelectedReview(model)
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
 }
 
 extension DashboardViewController {

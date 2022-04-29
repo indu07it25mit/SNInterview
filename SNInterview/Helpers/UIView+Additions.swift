@@ -26,3 +26,17 @@ extension UIView {
     }
 }
 
+struct Storyboard {
+      static let main = "Main"
+      static let review = "Review"
+}
+
+extension UIStoryboard {
+  @nonobjc class var main: UIStoryboard {
+    return UIStoryboard(name: Storyboard.main, bundle: nil)
+  }
+    
+  @nonobjc class var review: UIStoryboard {
+    return UIStoryboard(name: Storyboard.review, bundle: nil)
+  }
+}

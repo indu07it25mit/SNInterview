@@ -28,6 +28,9 @@
 		F9230D5A281BD82800AF8C8F /* SNError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9230D59281BD82800AF8C8F /* SNError.swift */; };
 		F9230D5D281BDA7900AF8C8F /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9230D5C281BDA7900AF8C8F /* BaseViewModel.swift */; };
 		F9230D5F281BDE1500AF8C8F /* InjectedKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9230D5E281BDE1500AF8C8F /* InjectedKey.swift */; };
+		F9230D62281BE2EC00AF8C8F /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9230D61281BE2EC00AF8C8F /* ReviewViewController.swift */; };
+		F9230D64281BE2F700AF8C8F /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9230D63281BE2F700AF8C8F /* ReviewViewModel.swift */; };
+		F9230D66281BE54100AF8C8F /* Review.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9230D65281BE54100AF8C8F /* Review.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		F9230D59281BD82800AF8C8F /* SNError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNError.swift; sourceTree = "<group>"; };
 		F9230D5C281BDA7900AF8C8F /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		F9230D5E281BDE1500AF8C8F /* InjectedKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedKey.swift; sourceTree = "<group>"; };
+		F9230D61281BE2EC00AF8C8F /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		F9230D63281BE2F700AF8C8F /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
+		F9230D65281BE54100AF8C8F /* Review.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Review.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,7 @@
 				576E9C68234E7B9900199B25 /* AppDelegate.swift */,
 				576E9C88234EC08400199B25 /* CoffeeShops.json */,
 				576E9C6C234E7B9900199B25 /* Main.storyboard */,
+				F9230D65281BE54100AF8C8F /* Review.storyboard */,
 				576E9C6F234E7B9C00199B25 /* Assets.xcassets */,
 				576E9C71234E7B9C00199B25 /* LaunchScreen.storyboard */,
 				576E9C74234E7B9C00199B25 /* Info.plist */,
@@ -147,6 +154,7 @@
 		F9230D4D281BD4FC00AF8C8F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F9230D60281BE2DD00AF8C8F /* Detail */,
 				F9230D5B281BDA6E00AF8C8F /* Base */,
 				F9230D4F281BD53E00AF8C8F /* CustomViews */,
 				F9230D4E281BD51C00AF8C8F /* Dashboard */,
@@ -203,6 +211,15 @@
 				F9230D5C281BDA7900AF8C8F /* BaseViewModel.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		F9230D60281BE2DD00AF8C8F /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F9230D61281BE2EC00AF8C8F /* ReviewViewController.swift */,
+				F9230D63281BE2F700AF8C8F /* ReviewViewModel.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +309,7 @@
 				576E9C89234EC08400199B25 /* CoffeeShops.json in Resources */,
 				576E9C70234E7B9C00199B25 /* Assets.xcassets in Resources */,
 				576E9C6E234E7B9900199B25 /* Main.storyboard in Resources */,
+				F9230D66281BE54100AF8C8F /* Review.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +329,7 @@
 			files = (
 				F9230D56281BD5EF00AF8C8F /* NetworkService.swift in Sources */,
 				576E9C8F234EF35F00199B25 /* UIView+Additions.swift in Sources */,
+				F9230D62281BE2EC00AF8C8F /* ReviewViewController.swift in Sources */,
 				576E9C6B234E7B9900199B25 /* DashboarViewController.swift in Sources */,
 				F9230D43281AE64B00AF8C8F /* CoffeeitemCellView.swift in Sources */,
 				F9230D58281BD61C00AF8C8F /* DashboardViewModel.swift in Sources */,
@@ -322,6 +341,7 @@
 				F9230D4A281BD17300AF8C8F /* NibWrapperView.swift in Sources */,
 				576E9C8D234EF29E00199B25 /* CoffeeShopItemView.swift in Sources */,
 				F9230D4C281BD1C900AF8C8F /* Utilities.swift in Sources */,
+				F9230D64281BE2F700AF8C8F /* ReviewViewModel.swift in Sources */,
 				F9230D45281AE6DE00AF8C8F /* CoffeeShop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

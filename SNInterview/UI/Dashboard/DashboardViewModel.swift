@@ -9,13 +9,9 @@
 import UIKit
 
 class DashboardViewModel: BaseViewModel {
-    let dependancyInjection: DependancyInjection
+    let dependancyInjection = DependancyInjection.shared
     var reviews: [CoffeeShop] = []
     var errorMessage: String?
-    
-    init(dependancyInjection: DependancyInjection) {
-        self.dependancyInjection = dependancyInjection
-    }
     
     func getRowCount() -> Int {
         reviews.count

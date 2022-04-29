@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Review View Controller-->
+        <scene sceneID="BJK-GP-ofj">
+            <objects>
+                <viewController storyboardIdentifier="Review" id="ANR-QI-f6K" customClass="ReviewViewController" customModule="SNInterview" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o4o-Xo-Q1i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N4D-es-PIc" customClass="CoffeeShopItemViewWrapper" customModule="SNInterview" customModuleProvider="target">
+                                <rect key="frame" x="20" y="233.5" width="374" height="429"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rxU-EZ-bZV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="N4D-es-PIc" firstAttribute="height" secondItem="o4o-Xo-Q1i" secondAttribute="height" multiplier="0.478795" id="8zn-LQ-Goj"/>
+                            <constraint firstItem="N4D-es-PIc" firstAttribute="width" secondItem="o4o-Xo-Q1i" secondAttribute="width" multiplier="0.903382" id="g2g-YX-qhJ"/>
+                            <constraint firstItem="N4D-es-PIc" firstAttribute="centerX" secondItem="o4o-Xo-Q1i" secondAttribute="centerX" id="hE6-oD-vLr"/>
+                            <constraint firstItem="N4D-es-PIc" firstAttribute="centerY" secondItem="o4o-Xo-Q1i" secondAttribute="centerY" id="yQF-mc-mzR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="coffeeView" destination="N4D-es-PIc" id="PYe-5y-cp6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NDd-Vs-jhx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2315.9420289855075" y="128.57142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
