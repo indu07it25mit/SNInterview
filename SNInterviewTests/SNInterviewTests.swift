@@ -9,9 +9,14 @@ import XCTest
 @testable import SNInterview
 
 class SNInterviewTests: XCTestCase {
+    
+    var sut: DashboardViewModel!
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        InjectedValues[\.service] = MockedNetworkService()
+        
+        sut = DashboardViewModel()
+        sut.loadData()
     }
 
     override func tearDown() {
@@ -19,10 +24,11 @@ class SNInterviewTests: XCTestCase {
     }
 
     func testCoffeeShop() {
-        let coffeeShop = CoffeeShop(name: "Test Coffee", review: "Test Review", rating: 1)
-        XCTAssertEqual(coffeeShop.name, "Test Coffee")
-        XCTAssertEqual(coffeeShop.review, "Test Review")
-        XCTAssertEqual(coffeeShop.rating, 1)
+        XCTAssertNil(sut.errorMessage)
+        let coffeeShop = sut.getCoffeeShop(at: 0)
+        XCTAssertEqual(coffeeShop.name, "Lofty")
+        XCTAssertEqual(coffeeShop.review, "Knowledgeable staff, stacked menu. Trust the Ethiopian in a pour over if you know your flavors. Will be back for the rest of this menu soon.")
+        XCTAssertEqual(coffeeShop.rating, 4)
     }
     
     func testLoadFromJSON() {
