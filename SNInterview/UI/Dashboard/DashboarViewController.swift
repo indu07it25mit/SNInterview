@@ -11,9 +11,8 @@ import UIKit
 class DashboardViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
-    var viewModel: DashboardViewModel = DashboardViewModel(dependancyInjection: DependancyInjection(service: MockedNetworkService()))
-    
-    
+    var viewModel: DashboardViewModel = DashboardViewModel(dependancyInjection: DependancyInjection.shared)
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         

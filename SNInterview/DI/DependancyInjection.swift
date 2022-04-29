@@ -9,9 +9,9 @@
 import UIKit
 
 class DependancyInjection {
-    let service: Service
+    @Injected(\.service) var service: Service
     
-    init(service: Service) {
-        self.service = service
-    }
+    static let shared = DependancyInjection()
+    
+    private init() { }
 }

@@ -27,6 +27,7 @@
 		F9230D58281BD61C00AF8C8F /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9230D57281BD61C00AF8C8F /* DashboardViewModel.swift */; };
 		F9230D5A281BD82800AF8C8F /* SNError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9230D59281BD82800AF8C8F /* SNError.swift */; };
 		F9230D5D281BDA7900AF8C8F /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9230D5C281BDA7900AF8C8F /* BaseViewModel.swift */; };
+		F9230D5F281BDE1500AF8C8F /* InjectedKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9230D5E281BDE1500AF8C8F /* InjectedKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		F9230D57281BD61C00AF8C8F /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		F9230D59281BD82800AF8C8F /* SNError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNError.swift; sourceTree = "<group>"; };
 		F9230D5C281BDA7900AF8C8F /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		F9230D5E281BDE1500AF8C8F /* InjectedKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				F9230D51281BD5A700AF8C8F /* DependancyInjection.swift */,
+				F9230D5E281BDE1500AF8C8F /* InjectedKey.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				F9230D58281BD61C00AF8C8F /* DashboardViewModel.swift in Sources */,
 				576E9C69234E7B9900199B25 /* AppDelegate.swift in Sources */,
 				F9230D52281BD5A800AF8C8F /* DependancyInjection.swift in Sources */,
+				F9230D5F281BDE1500AF8C8F /* InjectedKey.swift in Sources */,
 				F9230D5D281BDA7900AF8C8F /* BaseViewModel.swift in Sources */,
 				F9230D5A281BD82800AF8C8F /* SNError.swift in Sources */,
 				F9230D4A281BD17300AF8C8F /* NibWrapperView.swift in Sources */,
